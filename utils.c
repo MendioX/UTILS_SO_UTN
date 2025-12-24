@@ -2,84 +2,6 @@
 #include "utils.h"
 
 
-// struct MyStructureMessage* recibir_struct(int socket_cliente) {
-    
-//     t_list* valores = recibir_paquete(socket_cliente);
-
-//     struct MyStructureMessage* my_struct = malloc(sizeof(struct MyStructureMessage));
-
-   
-
-//     int* message_len = list_remove(valores, 0);
-//     my_struct->message_code = *message_len;
-
-//     message_len = list_remove(valores, 0);
-//     my_struct->modulo_name = *message_len;
-
-//     message_len = list_remove(valores, 0);
-//     my_struct->request = *message_len;
-
-//     message_len = list_remove(valores, 0);
-//     my_struct->response = *message_len;
-
-// 	message_len = list_remove(valores, 0);
-//     my_struct->query_prioridad = *message_len;
-
-// 	message_len = list_remove(valores, 0);
-//     my_struct->query_id = *message_len;
-    
-//     message_len = list_remove(valores, 0);
-//     my_struct->worker_id = *message_len;
-
-//     message_len = list_remove(valores, 0);
-//     my_struct->query_pc = *message_len;
-
-
-    
-//     //Extrae `text` de la lista
-//     int* text_len = list_remove(valores, 0);
-//     my_struct->text = malloc(*text_len);
-//     memcpy(my_struct->text, list_remove(valores, 0), *text_len);
-
-// 	//Extrae `query_name` de la lista
-//     int* query_name_len = list_remove(valores, 0);
-//     my_struct->query_name = malloc(*query_name_len);
-//     memcpy(my_struct->query_name, list_remove(valores, 0), *query_name_len);
-            
-    
-//     //AGREGADO EL "comunicacionWorkerStorage"---------------------------------------------------------------------------
-       
-//         message_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.instruccion = *message_len;
-
-//         message_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.direccion = *message_len;
-
-//         message_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.tamanio = *message_len;
-
-//         //Extrae `tag` de la lista
-//         int* tag_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.tag = malloc(*tag_len);
-//         memcpy(my_struct->INFOWorkerStorage.tag, list_remove(valores, 0), *tag_len);
-
-//         //Extrae `tagdestino` de la lista
-//         int* tagdest_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.tagdestino = malloc(*tagdest_len);
-//         memcpy(my_struct->INFOWorkerStorage.tagdestino, list_remove(valores, 0), *tagdest_len);
-
-//         //Extrae `contenido` de la lista
-//         int* cont_len = list_remove(valores, 0);
-//         my_struct->INFOWorkerStorage.contenido = malloc(*cont_len);
-//         memcpy(my_struct->INFOWorkerStorage.contenido, list_remove(valores, 0), *cont_len);
-
-//     //FIN DE "comunicacionWorkerStorage"---------------------------------------------------------------------------------
-           
-//     // Libera los elementos restantes de la lista
-//     list_destroy_and_destroy_elements(valores, free);
-
-//     return my_struct;
-// };
 
 struct MyStructureMessage* recibir_struct(int socket_cliente) {
 
@@ -519,15 +441,6 @@ void* recibir_buffer(int* size, int socket_cliente)
     log_destroy(buffer_log);
 	return buffer;
 }
-
-	// void inicializar_log(){
-
-	// 	modulo_log = log_create( "modulo.log", "LOGGER_TEST_UTILS", 1, LOG_LEVEL_INFO);
-	// 	if(modulo_log == NULL){
-	// 		perror("Error al cargar el log");
-	// 		exit(EXIT_FAILURE);
-	// 	}
-	// }
 
 
 
